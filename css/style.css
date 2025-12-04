@@ -63,8 +63,7 @@ nav ul li a::after{
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgb(0, 0, 255);
-  opacity: 0;
+background: radial-gradient(circle, rgba(37, 150, 190, 0) 40%, rgb(0, 0, 255) 100%);  opacity: 0;
   z-index: -1;
 
 } 
