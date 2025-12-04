@@ -63,13 +63,13 @@ nav ul li a::after{
   content: "";
   position: absolute;
   inset: 0;
-  background-color: rgba(37, 150, 190, 0.35);
+  background-color: rgb(0, 0, 255);
   opacity: 0;
   z-index: -1;
 
 }
 nav ul li a:hover::after{
-  opacity: .5;
+  opacity: .25;
 }
 
 nav ul li a:hover {
