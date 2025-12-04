@@ -59,7 +59,7 @@ nav ul li a:hover {
   color: white;
   text-stroke: 1px white;
   -webkit-text-stroke: 1px white;
-  background-color: blue;
+  background-color: aplha(blue, .8);
 }
 
 .screenreader-text {
