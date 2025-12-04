@@ -35,7 +35,8 @@ nav ul {
   padding: 2px;
   margin: 0;
   display: flex;
-  gap: 8px;
+  justify-content: center;
+  gap: 4px;
   align-items: center;
 }
 
@@ -48,6 +49,8 @@ nav ul li {
 }
 
 nav ul li a {
+  position: relative;
+  display: block;
   background-image: url(images/toolbar_button.png);
   background-size: cover;
   display: block;
@@ -56,7 +59,7 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a ::after{
+nav ul li a::after{
   content "";
   position: absolute;
   inset: 0;
