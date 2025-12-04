@@ -39,14 +39,14 @@ nav ul {
 
 nav ul li {
   background-color: transparent;
-  background-image: url(images/toolbar_button.png);
+  background-image: url(/images/toolbar_button.png);
   background-size: cover;
   float: left;
   border: 2px solid ;
 }
 
 nav ul li a {
-  background-image: url(images/toolbar_button.png);
+  background-image: url(/images/toolbar_button.png);
   background-size: cover;
   display: block;
   color: black;
