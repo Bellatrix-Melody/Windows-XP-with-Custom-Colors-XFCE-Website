@@ -1,82 +1,144 @@
-@keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
-}
-
-@property --angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
 
 body {
-  font-family: system-ui;
-  background: #000000;
-  color: white;
+  font-family: Tahoma;
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.hdqwalls.com%2Fdownload%2Fwindows-xp-bliss-4k-lu-3840x2160.jpg&f=1&nofb=1&ipt=4c71bbd72bb113fb8551536aaf865f101b19bb6f194c2d4a7a57aa596475d37c);
+  color: black;
   text-align: center;
 }
 
-h1 {
-  font-size: 40px;
-  font-family: impact;
+#window {
+border-bottom: 2px solid #0831d9;
+    border-left: 3px solid #0831d9;
+    border-right: 3px solid #001ea0;
+  margin: 0;
+  box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9, inset -2px -2px #001ea0, inset 2px 2px #166aee,
+        inset -3px -3px #003bda, inset 3px 3px #0855dd;
+  padding: 0 0 3px 0;
+  -webkit-font-smoothing: antialiased;
+}
+.title-bar {
+    position: relative;
+}
+
+.title-bar h1{
+    font-family: "Trebuchet MS";
+    background: linear-gradient(
+        180deg,
+        rgba(9, 151, 255, 1) 0%,
+        rgba(0, 83, 238, 1) 8%,
+        rgba(0, 80, 238, 1) 40%,
+        rgba(0, 102, 255, 1) 88%,
+        rgba(0, 102, 255, 1) 93%,
+        rgba(0, 91, 255, 1) 95%,
+        rgba(0, 61, 215, 1) 96%,
+        rgba(0, 61, 215, 1) 100%
+    );
+    padding: 0;
+    border-top: 1px solid #0831d9;
+    border-left: 1px solid #0831d9;
+    border-right: 1px solid #001ea0;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    font-size: 13px;
+    text-shadow: 1px 1px #0f1089;
+    height: 28px;
+    color: white;
+    text-align: left;
+    padding-left: 10px;
+    margin: 0;
+    line-height: 2;
+}
+
+.title-bar-controls {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    height: 100%;
+}
+
+.title-bar-controls { 
+  button {
+    width: 21px;
+    height: 21px;
+    margin: auto 2px auto 0; /* vertical center */
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    padding: 0;
+    box-shadow: none;
+  } 
+  button[aria-label="Minimize"] {
+    background-image: svg-load ("images/minimize.svg")
+  }
+}
+
+h2 {
+  background-image: url(https://i.imgur.com/p3n4jlR.png);
+  background-size: cover;
+  font-size: 20px;
+  text-align: left;
+  margin: 0;
+  padding: 5px;
+  padding-left: 10px;
+}
+
+main {
+  background-color: white;
 }
 
 p {
-  font-size: 20px;
+  font-size: 16px;
+  margin-top: 0px;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 figcaption {
   font-size: 12px;
 }
 
+nav {
+  background-image: url(https://i.imgur.com/p3n4jlR.png);
+  background-size: cover;
+  background-position: center;
+}
+
 nav ul {
+  border: 1px inset;
   list-style: none;
-  padding: 2px;
+  padding: 0;
   margin: 0;
   display: flex;
-  justify-content: center;
-  gap: 4px;
+  justify-content: left;
+  gap: 1px;
   align-items: center;
 }
 
 nav ul li {
-  background-color: transparent;
-  background-image: url(images/toolbar_button.png);
-  background-size: cover;
-  background-position: center;
-  border: 2px black;
+  background: none;
+  border: 0;
+  padding: 0;
 }
 
 nav ul li a {
-  position: relative;
-  z-index: 1; 
-  display: block;
-  background-size: cover;
-  display: block;
+  display: inline-block;              
+  background-image: url(https://i.imgur.com/UjJNYYT.png);
+  background-size: 100% 100%;           
+  background-repeat: no-repeat;       
+  background-position: center;
+  padding: 8px 9px;                  
   color: black;
-  padding: 5px 8px;
   text-decoration: none;
-}
-
-nav ul li a::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgb(0, 0, 255);
-  opacity: 0;
-  z-index: -1;
-
-} 
-nav ul li a:hover::after{
-  opacity: 1;
+  line-height: 1;
 }
 
 nav ul li a:hover {
+  box-shadow: inset 0px 0px 10px 1000px rgba(0, 0, 0, .1) ;
+  background-image: url(https://i.imgur.com/wiiz6p0.png);
   text-decoration: underline;
-  color: white;
-  text-stroke: 1px white;
-  -webkit-text-stroke: 1px white;
+  color: black;
+
 }
 
 .screenreader-text {
@@ -106,8 +168,8 @@ nav ul li a:hover {
 
 /* For devices with a minimum width of 768px (Medium) */
 @media screen and (min-width: 768px) {
-  h1 {
-    font-size: 50px;
+  h2 {
+    font-size: 34px;
   }
 
   p {
@@ -118,24 +180,26 @@ nav ul li a:hover {
     font-size: 18px;
   }
   nav ul li a {
-    padding: 10px 12px;
+    padding: 10px 10px;
+    line-height: .25;
   }
 }
 
 /* For devices with a minimum width of 992px (Large) */
 @media screen and (min-width: 992px) {
-  h1 {
-    font-size: 72px;
+  h2 {
+    font-size: 32px;
   }
 
   p {
-    font-size: 38px;
+    font-size: 20px;
   }
 
   figcaption {
     font-size: 24px;
   }
   nav ul li a {
-    padding: 14px 16px;
+    padding: 8px 8px;
+    line-height: .50;
   }
 }
