@@ -231,7 +231,7 @@ footer button[aria-label="start"] {
   display: flex;
   align-items: center;
   background-image: url("images/task_button.png");
-  background-size: cover;
+  background-size: contain;
   height: 100%;
   padding: 0 10px;
   margin: 0;
