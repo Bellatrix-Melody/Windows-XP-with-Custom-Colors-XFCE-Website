@@ -231,6 +231,9 @@ footer button[aria-label="start"] {
   background-image: url("images/start.png");
 }
 
+footer p {
+  font-size: 11px;
+}
 .tskbtn {
   display: flex;
   background-image: url("images/task_button.png");
