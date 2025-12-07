@@ -19,6 +19,8 @@ border-bottom: 2px solid #0831d9;
         inset -3px -3px #003bda, inset 3px 3px #0855dd;
   padding: 0 0 3px 0;
   -webkit-font-smoothing: antialiased;
+  width: fit-content;
+
 }
 .title-bar {
     position: relative;
