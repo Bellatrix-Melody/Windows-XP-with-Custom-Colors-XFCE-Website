@@ -253,6 +253,7 @@ footer button[aria-label="start"] {
   color: white;
   white-space: nowrap;
   font-size: 10px;
+  text-decoration: underline;
 }
 
 .screenreader-text {
