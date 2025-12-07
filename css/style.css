@@ -8,18 +8,23 @@ body {
   min-height: 100vh; 
   color: black;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
 }
 
 #window {
 border-bottom: 2px solid #0831d9;
     border-left: 3px solid #0831d9;
     border-right: 3px solid #001ea0;
-  margin: 0;
+  margin: 0 auto;
   box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9, inset -2px -2px #001ea0, inset 2px 2px #166aee,
         inset -3px -3px #003bda, inset 3px 3px #0855dd;
   padding: 0 0 3px 0;
   -webkit-font-smoothing: antialiased;
   width: fit-content;
+
 
 }
 .title-bar {
