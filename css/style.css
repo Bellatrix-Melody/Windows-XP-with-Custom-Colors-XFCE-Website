@@ -14,7 +14,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 #window {
   border-bottom: 2px solid #0831d9;
   border-left: 3px solid #0831d9;
@@ -27,6 +26,10 @@ body {
   width: fit-content;
 }
 
+body, #windowbody, #window {
+  padding-left: 0;
+  margin-left: 0;
+}
 .title-bar {
   position: relative;
 }
@@ -202,7 +205,7 @@ footer {
   display: flex;
   align-items: center;
   height: 24px;
-  padding: 0; /* REMOVE padding-left to let start button touch left edge */
+  padding: 0; 
   margin: 0;
   border-top: 1px solid #0831d9;
   border-left: 1px solid #0831d9;
@@ -210,7 +213,7 @@ footer {
   color: white;
   text-shadow: 1px 1px #0f1089;
   line-height: 1;
-  gap: 0px; /* smaller gap between sections */
+  gap: 0px; 
   box-sizing: border-box;
 }
 
@@ -224,7 +227,7 @@ footer button {
   padding: 0;
   margin: 0;
   flex-shrink: 0;
-  display: block; /* ensures no extra space */
+  display: block; 
 }
 
 footer button[aria-label="start"] {
@@ -249,23 +252,19 @@ footer button[aria-label="start"] {
 
 .taskbtn p {
   margin: 0;
-  padding: 0;
   font-size: 12px;
   color: white;
-  line-height: 22px; /* exactly the height of the container */
+  line-height: 20px; 
   white-space: nowrap;
 }
 
 .taskbtn a {
   color: white;
   text-decoration: none;
-  line-height: 22px; /* match parent height */
+  font-size: 12px;
+  line-height: 20px; 
   white-space: nowrap;
 }
-
-
-
-
 
 
 .screenreader-text {
