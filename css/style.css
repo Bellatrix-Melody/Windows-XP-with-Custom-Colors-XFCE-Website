@@ -35,6 +35,8 @@ body {
   padding: 0 0 3px 0;
   -webkit-font-smoothing: antialiased;
   width: fit-content;
+  display: flex;
+  flex-direction: column;
   max-height: 100vh;
 }
 
@@ -124,6 +126,7 @@ main {
   background-color: white;
   width: fit-content;
   margin: 0 auto;
+  flex: 1;
   overflow: auto;
   max-height: calc(100vh - 28px - 20px - navHeight);
 }
