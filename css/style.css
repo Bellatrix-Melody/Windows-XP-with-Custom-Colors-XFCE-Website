@@ -1,21 +1,28 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: Tahoma;
   background-image: url("images/bliss.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center top;
-  min-height: 100vh;
   color: black;
   text-align: center;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 #windowbody{
   display: inline-flex;
   justify-content: center;
+  justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 20px auto 0 auto;
 }
+
 #window {
   border-bottom: 2px solid #0831d9;
   border-left: 3px solid #0831d9;
@@ -212,6 +219,7 @@ footer {
   line-height: 1;
   gap: 0px;
   box-sizing: border-box;
+  margin-top: auto;
 }
 
 footer button[aria-label="start"] {
