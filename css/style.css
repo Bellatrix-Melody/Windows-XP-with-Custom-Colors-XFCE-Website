@@ -232,6 +232,7 @@ footer button[aria-label="start"] {
   align-items: center;
   background-image: url("images/task_button.png");
   background-size: contain;
+  background-repeat: no-repeat;
   height: 100%;
   padding: 0 10px;
   margin: 0;
@@ -256,9 +257,7 @@ footer button[aria-label="start"] {
   text-decoration: underline;
 }
 
-.taskbtn a {
-  background-size: contain;
-}
+
 
 .screenreader-text {
   position: absolute;
