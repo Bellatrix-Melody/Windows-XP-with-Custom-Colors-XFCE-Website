@@ -16,11 +16,12 @@ body {
 }
 
 #windowbody{
-  display: inline-flex;
-  justify-content: center;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 20px 20px 20px 20px;
+  margin: 30px;
+  flex: 1;
+  min-height: 100vh;
 }
 
 #window {
@@ -133,6 +134,13 @@ p {
   margin-right: 1%;
 }
 
+figure {
+  width: 100%;
+  max-width: 800px;   
+  margin: 0 auto;     
+  text-align: center; 
+}
+
 img {
   width: 100%;
   max-width: 800px;
@@ -151,7 +159,7 @@ img {
 }
 
 figcaption {
-  font-size: .25em;
+  font-size: .25em !important;
 }
 
 nav {
@@ -313,7 +321,7 @@ footer button[aria-label="start"] {
   }
 
   figcaption {
-    font-size: 24px;
+    font-size: 16px;
   }
 
   nav ul li a {
