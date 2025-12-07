@@ -232,8 +232,10 @@ footer button[aria-label="start"] {
 }
 
 .tskbtn {
-  display: flex; 
+  display: flex;
   background-image: url("images/task_button.png");
+  background-size: cover;
+  font-size: 12px;
 }
 
 .screenreader-text {
