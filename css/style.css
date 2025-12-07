@@ -26,10 +26,7 @@ body {
   width: fit-content;
 }
 
-body, #windowbody, #window {
-  padding-left: 0;
-  margin-left: 0;
-}
+
 .title-bar {
   position: relative;
 }
@@ -228,6 +225,7 @@ footer button {
   margin: 0;
   flex-shrink: 0;
   display: block; 
+  padding-top: 20px;
 }
 
 footer button[aria-label="start"] {
@@ -252,6 +250,10 @@ footer button[aria-label="start"] {
 
 .taskbtn p {
   margin: 0;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
   font-size: 12px;
   color: white;
   line-height: 20px; 
