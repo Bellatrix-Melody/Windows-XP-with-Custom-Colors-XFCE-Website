@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: Tahoma;
   background-image: url("images/bliss.jpg");
@@ -14,7 +19,6 @@ body {
   justify-content: center;
   align-items: center;
   margin-bottom: 20px;
-  flex: 1;
 }
 #window {
   border-bottom: 2px solid #0831d9;
