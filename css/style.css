@@ -21,7 +21,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  margin: 20px;
+  padding: 20px;
 }
 
 #window {
@@ -37,7 +37,8 @@ body {
   width: fit-content;
   display: flex;
   flex-direction: column;
-  max-height: calc(100vh - 60px);
+  max-height: 100%;
+  box-sizing: border-box;
 }
 
 .title-bar {
