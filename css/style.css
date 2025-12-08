@@ -29,7 +29,7 @@ body {
   border-bottom: 2px solid #0831d9;
   border-left: 3px solid #0831d9;
   border-right: 3px solid #001ea0;
-  margin: 0 auto;
+  margin: auto;
   box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9,
               inset -2px -2px #001ea0, inset 2px 2px #166aee,
               inset -3px -3px #003bda, inset 3px 3px #0855dd;
@@ -38,7 +38,6 @@ body {
   width: fit-content;
   display: flex;
   flex-direction: column;
-  max-height: 100%;
   box-sizing: border-box;
 }
 
@@ -130,7 +129,7 @@ main {
   margin: 0 auto;
   flex: 1;
   overflow: auto;
-  max-height: calc(100vh - 28px - 20px - navHeight);
+  max-height: calc(100vh - 48px);
 }
 
 p {
@@ -142,8 +141,6 @@ img {
   width: auto;
   height: 100%;
   max-height: 400px;
-  padding: 0;
-  margin: 0;
 }
 
 figure {
@@ -166,8 +163,6 @@ figcaption {
   justify-content: center;
   gap: 10px;
   flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
 }
 
 .imgflexbox figure {
@@ -193,8 +188,6 @@ nav ul {
 }
 
 nav ul li {
-  padding: 0;
-  border: 0;
   background: none;
 }
 
@@ -282,7 +275,6 @@ footer button[aria-label="start"] {
 .taskbtn p,
 .taskbtn a {
   margin: 0;
-  padding: 0;
   line-height: normal;
   display: flex;
   align-items: center;
