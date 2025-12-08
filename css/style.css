@@ -39,6 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  max-height: calc(100vh - 48px);
 }
 
 .title-bar {
@@ -129,7 +130,7 @@ main {
   margin: 0 auto;
   flex: 1;
   overflow: auto;
-  max-height: calc(100vh - 60px);
+  
 }
 
 p {
