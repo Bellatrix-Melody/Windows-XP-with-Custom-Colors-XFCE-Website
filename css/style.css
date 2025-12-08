@@ -33,7 +33,7 @@ body {
   box-shadow: inset -1px -1px #00138c, inset 1px 1px #0831d9,
               inset -2px -2px #001ea0, inset 2px 2px #166aee,
               inset -3px -3px #003bda, inset 3px 3px #0855dd;
-  padding: 0 0 3px 0;
+  padding: 0 0 20px 0;
   -webkit-font-smoothing: antialiased;
   width: fit-content;
   display: flex;
