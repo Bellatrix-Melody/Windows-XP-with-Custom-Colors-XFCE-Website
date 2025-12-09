@@ -5,114 +5,514 @@
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>WinXP Color Converter</title>
   <meta charset="utf-8">
+  <script src="scripts/script.js" defer></script>
 </head>
 
 <body>
   <div id="windowbody">
-  <a id="skip-nav" class="screenreader-text" href="#maincontent"> skip to content</a>
- <div id="window">
-  <header>
-    <div class="title-bar">
-    <h1>Home & Examples</h1>
-      <div class="title-bar-controls">
-        <button aria-label="Minimize"></button>
-        <button aria-label="Maximize"></button>
-        <button aria-label="Close"></button>
-    </div>
-    </div>
-    <h2>Windows XP with Custom Colors for XFCE</h2>
-  </header>
-  <nav>
-    <ul>
-       <li>
-        <a href="index.html">Home & Examples</a>
-      </li>
-      <li>
-        <a href="getting-started.html">Getting Started</a>
-      </li>
-      <li>
-        <a href="tools.html">Extras & Tools</a>
-      </li>
-      <li>
-        <a href="details.html">Technical Details</a>
-      </li>
+    <a id="skip-nav" class="screenreader-text" href="#maincontent"> skip to content</a>
+    <div id="window">
+      <header>
+        <div class="title-bar">
+          <h1>Windows XP with Custom Colors for XFCE</h1>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <h2>Home & Examples</h2>
+      </header>
+
+      <div class="tabs">
+        <ul>
+          <li>
+            <span id="active" data-tab-value="#tab1">Home & Examples</span>
+          </li>
+          <li>
+            <span data-tab-value="#tab2">Getting Started</span>
+          </li>
+          <li>
+            <span data-tab-value="#tab3">Extras & Tools</span>
+          </li>
+          <li>
+            <span data-tab-value="#tab4">Technical Details</span>
+          </li>
+          <li>
+            <span data-tab-value="#tab5">Links & Credits</span>
+          </li>
+        </ul>
+      </div>
+
+      <main id="maincontent">
+        <div class="tab-content">
+          <div class="tabs__tab active" id="tab1" data-tab-info>
+            <article>
+              <h3>
+                <br>
+                <strong>
+                  An easy to use tool to create your own custom version of the RedmondXP theme for XFCE automatically,
+                  based off your chosen background image or your own custom color scheme.
+                </strong>
+              </h3>
+              <br>
+              <h3>
+                <strong>Here are some examples of themes created with the tool:</strong>
+              </h3>
+              <br>
+            </article>
+
+            <div class="imgflexbox">
+              <figure>
+                <img src="images/tsukasa-theme.png"
+                  alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>An example of a light background with a dark color scheme.</figcaption>
+              </figure>
+              <figure>
+                <img src="images/ccs-theme.png"
+                  alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>
+                  An example of a light background with a light color scheme as well as custom icons using the
+                  custom icon swapper tool
+                </figcaption>
+              </figure>
+            </div>
+
+            <div class="imgflexbox">
+              <figure>
+                <img src="images/mimiru-theme.png"
+                  alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>An example of a very vibrant color scheme</figcaption>
+              </figure>
+              <figure>
+                <img src="images/unit01.png" alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>An example of a dark background with a vibrant color scheme.</figcaption>
+              </figure>
+            </div>
+
+            <div class="imgflexbox">
+              <figure>
+                <img src="images/haibane-theme.png"
+                  alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>
+                  An example of a very dark color scheme against a very light background
+                </figcaption>
+              </figure>
+              <figure>
+                <img src="images/lain-theme.png"
+                  alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>An example using an almost monochrome color scheme.</figcaption>
+              </figure>
+            </div>
+
+            <div class="imgflexbox">
+              <figure>
+                <img src="images/haibane2.png" alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>An example using earth tones</figcaption>
+              </figure>
+              <figure>
+                <img src="images/bebop-theme.png"
+                  alt="A picture of recolored windows xp theme with an anime background" />
+                <figcaption>An example capturing sunset colors.</figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="tabs__tab" id="tab2" data-tab-info>
+            <h4>Installation</h4>
+            <article>
+              <p>Open a terminal in your desired install directory and clone the repo via:</p>
+
+              <div class="codebox">
+                <pre
+                  class="code">git clone https://github.com/Bellatrix-Melody/Windows-XP-with-Custom-Colors-XFCE.git</pre>
+              </div>
+
+              <p>Open a terminal in the repo folder (RedmondXP-Color-Customizer-for-XFCE-main/) and give the script
+                executable permissions</p>
+
+              <div class="codebox">
+                <pre class="code">sudo chmod +x redmond_color_converter.sh</pre>
+              </div>
+
+              <p> Once the script is installed you will need to install the dependencies:</p>
+
+              <ol>
+                <li><strong>Python 3 & Python 3 venv</strong>: You can get this from your software manager or the
+                  repositories via these commands:</li>
+
+                <div class="codebox">
+                  <pre class="code">sudo apt install python3 python3-venv</pre>
+                </div>
+
+                <li><strong>ImageMagick</strong>: Included in the repository is a script to install Image Magick that
+                  comes from this <a href="https://github.com/SoftCreatR/imei/blob/main/">repo</a>. Open a terminal in
+                  the repo folder (RedmondXP-Color-Customizer-for-XFCE-main/) and give it execute permissions then run
+                  it via: </li>
+
+                <div class="codebox">
+                  <pre class="code">sudo chmod +x magick_install.sh ;
+                                                      ./magick_install.sh
+                                      </pre>
+                </div>
+              </ol>
+
+              <p>If you'd rather get this directly from Image Magick and not give sudo permissions from a install script
+                on Github then you can find the standalone executable at: <a
+                  href="https://imagemagick.org/script/download.php">https://imagemagick.org/script/download.php</a>
+              </p>
+              <p>Open a terminal in the download folder and give it executable permissions and move it to your /bin
+                folder:</p>
+              <div class="codebox">
+                <pre class="code">sudo chmod +x magick ; 
+                                    mv magick /usr/local/bin/</pre>
+              </div>
+
+              <h4>Usage</h4>
+              <p>Place your desired background images in Windows-XP-with-Custom-Colors-XFCE-main/backgrounds/ folder,
+                then open a terminal in the repository folder RedmondXP-Color-Customizer-for-XFCE-main/ and run the
+                script via:</p>
+              </p>
+              <div class="codebox">
+                <pre class="code">./redmond_color_converter.sh</pre>
+              </div>
+              <p>The script will guide you through the rest of the process, but below is some context regarding a few of
+                the questions the script asks you</p>
+
+              <p><strong>Have you run this script before?</strong></p>
+              <p>If answered no, the script will run another small script that creates a python virtual environment (aka
+                venv) for the background color picker and installs its dependencies in that virtual environment. This
+                sandboxes the python scripts so that they have no effect outside running the color converter script. If
+                you have answered no while using the script before or you <strong>only</strong> want to enter custom
+                colors and do not want to use background color picker, then answer yes.</p>
+              <br>
+              <p><strong>Do you want to use grayscale minimize and maximize buttons?</strong></p>
+              <p>If answered yes, the script will use grayscale minimize and maximize buttons instead of colorizing them
+                to your primary color. Due to the way these are shaded, it will often make the white of the minimize and
+                maximize buttons dissapear. Saying yes is generally the safest option in most cases. If you look at the
+                examples page you can see some cases where colorized buttons work to get an idea for what might work for
+                your color scheme.</p>
+              <br>
+              <p><strong>Would you like your tray(i.e where your clock typically goes) to be based off your secondary
+                  color?</strong></p>
+              <p>Answering yes here is also generally recommended, unless you want to go for a more monochomatic look.
+              </p>
+
+              <h4>Known Bugs</h4>
+              <ol>
+                <li><strong>Clock text not updating color</strong></li>
+                <p>When using a custom font on the clock in the XFCE panel the text color does not change. If you run
+                  into this you can change it manually by going to the clock settings and making a custom format. You
+                  can insert the following code into the custom format field and change the colors to black (#000000) or
+                  white (#FFFFFF) or some other custom hex color of your choosing to change the text color.</p>
+                <div class="codebox">
+                  <pre class="code">&lt;span color="#000000"&gt;%l:%M:%P&lt;/span&gt;</pre>
+                  <li>A single line of pixels above the system tray</li>
+                  <p> There will sometime be a single line of pixels above the system tray that is your primary color. A
+                    solution to this has been researched but not found. It is seemingly due to how XFCE draws the tray
+                    and is not affected by the CSS of the theme or by manually editing the image that makes up the
+                    system tray. Recommendation: if it bothers you plan around it with your color scheme. Generally a
+                    darker panel with a light system tray makes it stand out much less.</p>
+              </ol>
+            </article>
+          </div>
+
+          <div class="tabs__tab" id="tab3" data-tab-info>
+            <h4>Tools</h4>
+            <article>
+              <p>The repository comes with some other handy scripts beyond the color converter for you to use or not, up
+                to
+                you. They are in the tools folder</p>
+
+              <h5>Magick_HEX_to_HSL_converter</h5>
+
+              <p>A standalone version of the converter used in the main script that lets you start with a different base
+                color. Useful for if you need to do batch processing of color conversion like this script does. For
+                details on how to use this and how it works see the "Technical Information" tab</p>
+
+              <h5>Custom Icon Swapper</h5>
+
+              <p>A pretty simple icon swapper using <a
+                  href="https://github.com/B00merang-Artwork/Windows-XP">B00merang's
+                  XP icon pack</a> as a base. You need to first make the base
+                icons you want to use 128x128 using a program like <a href="https://www.gimp.org/downloads/">GIMP</a> or
+                the image editor of your choice.
+                <br>
+                <br>
+                <strong> If you do not make the images you want to use as custom icons 128x128 you will have icon size
+                  issues!!</strong>
+                <br>
+                <br>
+                All you need to do is replace the current files in custom-icons using the follow format:
+              </p>
+
+              <ul>
+                <li><strong>Your custom "My Computer" icon</strong>
+                  <br>
+                  computer.png
+                </li>
+                <li><strong>Your custom "My Documents" icon</strong>
+                  <br>
+                  documents.png
+                </li>
+                <li><strong>Your custom "Network" icon</strong>
+                  <br>
+                  network.png
+                </li>
+                <li><strong>Your custom "Trash" icon</strong>
+                  <br>
+                  trash.png
+                </li>
+              </ul>
+              <h4>Included Extras</h4>
+              <h5>Fonts</h5>
+              <p>A pack of truetype fonts that are more XP aligned is included in the repository. They were taken from
+                <a href="https://github.com/rozniak/xfce-winxp-tc">rozniak's</a> winxp total conversion project. Just
+                drop
+                them wherever your distribution keeps your true type fonts and change the fonts
+              </p>
+            </article>
+          </div>
+
+          <div class="tabs__tab" id="tab4" data-tab-info>
+            <article>
+              <p>The primary color conversion script consists of 3 main components</p>
+
+              <h4>Finding the correct HSL for ImageMagick</h4>
+              <p>It starts by taking a primary color (either chosen through the integrated python-based color extractor
+                based off your chosen background image, or inputed by the user) and converting to HSL format. HSL is
+                three
+                components Hue, Saturation, and Lightness or in layman's terms base color, how much color, and how
+                bright
+                the color is (if you want to get really techincal check out the <a
+                  href="https://en.wikipedia.org/wiki/HSL_and_HSV">wiki</a> ).</p>
+
+              <p>Image Magick does not take raw HSL colors for it's '-modulate' option so finding a color match is a bit
+                tricky.</p>
+
+              <p>First a color swatch was created by using the following command:</p>
+              <div class="codebox">
+                <pre class="code">magick taskbar.png -scale 1x1! -format "%[hex:u.p]\n" info:</pre>
+              </div>
+              <p>This outputs the average color of taskbar.png (this is also referred to as the panel in XFCE) as a hex
+                color.</p>
+
+              <p>Example:</p>
+              <div class="codebox">
+                <pre class="code">recolor-target/gtk-3.0/assets$ magick taskbar.png -scale 1x1! -format "%[hex:u.p]\n" info:
+              265FD9FF</pre>
+              </div>
+
+
+              <p>Then using GIMP a small image with just that averaged color was created (called msblue.png in the
+                colortest/ folder).</p>
+
+              <p> Then average of msblue.png was converted into HSL colors.This tool<a
+                  href="https://r0d3r1ck0rd0n3z.github.io/ImageMagick-Modulate-Calculator/">here</a> converts a H value
+                from the base color to a target color and outputs the number to be used in the hue adjustment in
+                ImageMagick's -modulate command. Using the math in the java script of that tool, a list was created of
+                what numbers in Image Magick -modulate command will make the base color (from msblue.png) into the
+                desired custom color.</p>
+
+              <h5>The Brute Force Method(tm)</h5>
+
+              <p>Now here is where it gets a bit stupid.</p>
+              <p>Consistent math to convert standard saturation (0-100%) and standard lightness (0-100%) into Image
+                Magick's saturation (0-200, 100 is no change) and lightness (0-200, 100 is no change) values could not
+                be found. So the script figures it by brute forcing it. The goal becomes finding the saturation and
+                lightness values of our custom color.</p>
+
+              <p>The brute force method is rather simple, it stars by '-modulate'ing the swatch, useing the hue value
+                found in the previous section, and (starting at 0) test it until it matches the saturation value of the
+                target color, and not touch the L value (for now). </p>
+
+              <p>Note: Image Magick takes HSL values in the following way:</p>
+
+              <div class="codebox">
+                <pre>-modulate L,S,H</pre>
+              </div>
+              <br>
+
+              <p>The code for this section looks like this:</p>
+              <div class="codebox">
+                <pre>testS=0
+magickS=0
+
+until [[ magickS >= targetS - 1 && magickS <= targetS + 1  ]]
+do
+    magick colortest/msblue.png -set option:modulate:colorspace hsl -modulate 100,$testS,$convertedH colortest/msnotblue.png
+    msnotblue=$(magick colortest/msnotblue.png -scale 1x1! -format "%[hex:u.p]\n" info:)
+    read magickH magickS magickL < <(converter_tester)
+    ((testS++))
       
-      <li>
-        <a href="credits.html">Links & Credits</a>
-      </li>
-    </ul>
-  </nav>
-  <main id="maincontent">
-    <article>
-      <p><br>
-        <strong>An easy to use tool to create your own custom version of the RedmondXP theme for XFCE based off your chosen background image or your own custom color scheme.</strong>
-     
-      </p>
-       <br>
-      <p>
-      <strong>Here are some examples of themes created with the tool:</strong>
-      </p>
-      <br>
-    </article>
-   <div class="imgflexbox">
-    <figure>
-      <img src="images/tsukasa-theme.png" alt="A picture of recolored windows xp theme with an anime background" />
-      <figcaption>An example of a light background with a dark color scheme.</figcaption>
-    </figure>
-    <figure>
-      <img src="images/ccs-theme.png" alt="A picture of recolored windows xp theme with an anime background" />
-      <figcaption>An example of a light background with a light color scheme as well as custom icons using the custom icon swapper tool</figcaption>
-    </figure>
-    </div>
+done
 
-    <div class="imgflexbox">
-    <figure>
-      <img src="images/mimiru-theme.png" alt="A picture of recolored windows xp theme with an anime background" />
-      <figcaption>An example of a very vibrant color scheme</figcaption>
-    </figure>
-    <figure>
-      <img src="images/unit01.png" alt="A picture of recolored windows xp theme with an anime background" />
-      <figcaption>An example of a dark background with a vibrant color scheme.</figcaption>
-    </figure>
-    </div>
+convertedS=$testS
+                </pre>
 
-    <div class="imgflexbox">
-    <figure>
-      <img src="images/haibane-theme.png" alt="A picture of recolored windows xp theme with an anime background" />
-      <figcaption>An example of a very dark color scheme agaisnt a very light background</figcaption>
-    </figure>
-    <figure>
-      <img src="images/lain-theme.png" alt="A picture of recolored windows xp theme with an anime background" />
-      <figcaption>An example using an almost monochrome color scheme.</figcaption>
-    </figure>
-    </div>
+              </div>
+              <br>
 
-    <div class="imgflexbox">
-      <figure>
-        <img src="images/haibane2.png" alt="A picture of recolored windows xp theme with an anime background" />
-        <figcaption>An example using earth tones</figcaption>
-      </figure>
-      <figure>
-        <img src="images/bebop-theme.png" alt="A picture of recolored windows xp theme with an anime background" />
-        <figcaption>An example capturing sunset colors.</figcaption>
-      </figure>
-    </div>
-  </main>
- </div>
-</div>
+              <p>Here is a breakdown of this function step by step</p>
 
- <footer>
-  <button aria-label="start"></button>
-  <div class="taskbtn">
-    <p>Author: Bellatrix Melody</p>
+              <p>To start two variables are set: testS and magickS. Then they are both made to be equal to 0.</p>
+
+              <p>Then there is a loop saying until magickS is equal to targetS(±1) (targetS being the saturation level
+                of the target custom color) do the following 4 commands:</p>
+
+              <p><strong>Command 1:</strong></p>
+              <div class="codebox">
+                <pre>magick colortest/msblue.png -set option:modulate:colorspace hsl -modulate 100,$testS,$convertedH colortest/msnotblue.png</pre>
+              </div>
+              <br>
+
+              <p>So here the lightness of our test swatch (msblue.png) is set to 100 (which in image magick means no
+                change), the saturation is set to the current value of testS (0 to start), andthe hue value target hue
+                value that was found above, and finally save it as msnotblue.png.</p>
+
+              <p><strong>Command 2:</strong></p>
+
+              <div class="codebox">
+                <pre>msnotblue=$(magick colortest/msnotblue.png -scale 1x1! -format "%[hex:u.p]\n" info:)</pre>
+              </div>
+              <br>
+
+              <p>Here the variable "msnotblue" is set to be equal to the same command that was ran earlier to find the
+                average color of an image in hex format but on the image that was just created i.e. msnotblue.png.
+
+              </p>Since the goal is to test the a value and not a hex value, the output of that command needs to be
+              converted to a HSL format which is why it is stored it in a variable, so that this command can be run:
+              </p>
+
+              <p><strong>Command 3:</strong></p>
+
+              <div class="codebox">
+                <pre>read magickH magickS magickL < <(converter_tester)</pre>
+              </div>
+              <br>
+
+              <p>This just sets the variables magickH magickS and magickL to the output of the function much earlier in
+                the script that converts hex colors to HSL values(see credits).</p>
+
+              <p>The function converter_tester just converts the output that was stored earlier in the variable
+                msnotblue into the HSL values which are then stored in magickH magickS and magickL. </p>
+
+              <p>Finally, <strong>Command 4:</strong></p>
+              <div class="codebox">
+                <pre>((testS++))</pre>
+              </div>
+              <br>
+
+              <p>This just increments the value of testS by 1 (so that if testS is equal to 0 it adds one to it making
+                it 1, 1 then 2, etc.) until the condition of the loop is met i.e. the saturation level of msnotblue.png
+                is the value of the target custom color.</p>
+
+              <p>Once the loop is over the value of testS is stored in a variable to use later during the image
+                conversion via this command: </p>.
+
+              <div class="codebox">
+                <pre>convertedS=$testS</pre>
+              </div>
+              <br>
+
+              <p>The same process is repeated again but looking for the lightness value until a set of L,S, and H values
+                that will cause the desired color shift with ImageMagick is found.</p>
+            </article>
+
+            <figure>
+              <img src="images/this-is-stupid.gif" alt="An image showing text in all caps saying 'THIS' 'IS' 'STUPID'"
+                style="max-width: 497px;" />
+              <figcaption>It is stupid, but it works.</figcaption>
+            </figure>
+
+            <article>
+              <h4>Image Conversion</h4>
+              <p>Now that the commands to create the target colors are found the corrected magick command is run on all
+                of the images
+                in recolor-target, i.e. all of the blue things.</p>
+
+              <p>There are a couple notable extra things here, the folowing commands are used to reprocess
+                sidebar-backdrop.png (this
+                is the sidebar in things like your file manager i.e. Thunar). Through testing it was found that the
+                sidebar was getting blown out in lighter color schemes, so it is also run through a seperate brute 
+                force conversion earlier in the script and then converted</p>
+              <p><strong>Line 654</strong></p>
+              <div class="codebox">
+                <pre>cp RedmondXP/gtk-3.0/assets/sidebar-backdrop.png custom-themes/
+$ThemeName/gtk-3.0/assets/sidebar-backdrop.png
+magick custom-themes/$ThemeName/gtk-3.0/assets/sidebar-backdrop.png -set option:modulate:colorspace hsl -modulate $convertedLb,$convertedSb,$convertedH2 custom-themes/$ThemeName/gtk-3.0/assets/sidebar-backdrop.png</pre>
+              </div>
+              <br>
+              <p>A similar function is used with tray.png (the far right side of your panel in XFCE) and where the lightness value is lowered by ten. It was often too samey and the slight adjustment after the color conversion makes it feel more distinct. Unless you are using your secondary color as your tray color, then it is run through another brute force conversion, by searching for your secondary color and edited like sidebar-backdrop.png.</p>
+            
+              <p><strong>Line 664</strong></p>
+            
+              <div class="codebox">
+                <pre>magick custom-themes/$ThemeName/gtk-3.0/assets/tray.png -set option:modulate:colorspace hsl -modulate 90,100,100 custom-themes/$ThemeName/gtk-3.0/assets/tray.png</pre> 
+              </div>
+              
+              <br>
+              
+              <p>Finally, there is an option added to make the minimize and maximize buttons grayscale, since they were often being lost with darker color schemes. The code completely desaturates the base RedmondXP images because a simple grayscale conversion produced worse results. The way that ImageMagick handles .xpm files is strange so this is wrapped up in a more complicated function, but the pertinent line is this:</p>
+              
+              <p><strong>Line 738</strong></p>
+              
+              <div class="codebox">
+                <pre> magick "$tmp" -set option:modulate:colorspace hsl -modulate 100,0,100 "$tmp"
+                  ($tmp being the current minimize or maximize button image)</pre>
+              </div>
+              <br>
+              <h4>Editing the CSS</h4>
+              <p>So RedmondXP uses several CSS documents to assign the color of various elements and pulls them all into a primary CSS file called gtk.css in the gtk-3.0. Custom variables are set to be called in the other documents, which you can see in gtk.css under the "custom colors" comment. The only files touched are found in recolor-target/gtk-3.0/ so it should be easy to search for what was changed using:</p>  
+              
+              <div class="codebox">
+                <pre class="code">grep -l "variable-name" *.css</pre>
+              </div>
+              
+              <p>The rest of the CSS files are unchanged.</p>
+              
+              <p>The file "themerc" in xfce/ is also edited since it determines the color of text in your title bar.</p> 
+          </article>
+          </div>
+
+          <div class="tabs__tab" id="tab5" data-tab-info>
+            <article>
+              <h5>RedmondXP</h5>
+              <p><a href="https://github.com/matthewmx86/RedmondXP">matthewmx86</a></p>
+
+              <h5>Fonts</h5>
+              <p><a href="https://github.com/rozniak/xfce-winxp-tc">rozniak</a></p>
+
+              <h5>Icons for the icon swapper</h5>
+              <p><a href="https://github.com/B00merang-Artwork/Windows-XP">B00merang</a></p>
+
+              <h5>color_extractor</h5>
+              <p><a href="https://github.com/robinoscarsson/color_extractor">Robinoscarsson</a></p>
+
+              <h5>the numbers for the hue conversion</h5>
+              <p><a href="https://github.com/r0d3r1ck0rd0n3z/ImageMagick-Modulate-Calculator/tree/master">r0d3r1ck0rd0n3z</a></p>
+
+              <h5>The titlebar for this website's windows theme</h5>
+              <p><a href="https://github.com/botoxparty/XP.css/tree/main">botoxparty</a></p>
+            </article>
+          </div>
+        </div>
+      </main>
+    </div>
   </div>
-  <div class="taskbtn">
-   <p><a href="mailto:XPColorConverter@proton.me">Email me</a></p>
-  </div>
-  <div class="taskbtn">
-   <p><a href="https://github.com/Bellatrix-Melody/Windows-XP-with-Custom-Colors-XFCE">Github Repo</a></p>
-  </div>
- </footer>
+
+  <footer>
+    <button aria-label="start"></button>
+    <div class="taskbtn">
+      <p>Author: Bellatrix Melody</p>
+    </div>
+    <div class="taskbtn">
+      <p><a href="mailto:XPColorConverter@proton.me">Email me</a></p>
+    </div>
+    <div class="taskbtn">
+      <p><a href="https://github.com/Bellatrix-Melody/Windows-XP-with-Custom-Colors-XFCE">Github Repo</a></p>
+    </div>
+  </footer>
 </body>
 
 </html>
