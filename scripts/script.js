@@ -37,10 +37,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const tabs = document.querySelectorAll('[data-tab-value]')
     const tabInfos = document.querySelectorAll('[data-tab-info]')
+    const tabScrollPositions = {}
 
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             const target = document.querySelector(tab.dataset.tabValue);
+            const mainContent = document.querySelector('main');
+            const activeTab = document.querySelector('.tabs__tab.active');
+
+            if (mainContent && activeTab && activeTab.id) {
+                tabScrollPositions[activeTab.id] = mainContent.scrollTop;
+            }
 
             tabs.forEach(t => {
                 t.removeAttribute('id');
@@ -53,6 +60,11 @@ document.addEventListener('DOMContentLoaded', function () {
             tab.id = 'active';
             if (target) {
                 target.classList.add('active');
+            }
+
+            if (mainContent) {
+                const savedPosition = target && target.id ? tabScrollPositions[target.id] : 0;
+                mainContent.scrollTop = savedPosition || 0;
             }
 
             const headerH2 = document.querySelector('header h2');
